@@ -5,10 +5,6 @@ export class TestAdapter extends IoAdapter {
     super();
   }
   createIOServer(port: number, options?: any): any {
-    const server = super.createIOServer(port, options);
-
-    server.origins('*:*');
-
-    return server;
+    return super.createIOServer(port, options);
   }
 }
