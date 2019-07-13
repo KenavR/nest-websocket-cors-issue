@@ -7,3 +7,17 @@ First install the dependencies with `npm install` and then start the server with
 ##  Error Message
 
 ![Console](https://raw.githubusercontent.com/KenavR/nest-websocket-cors-issue/master/error.png)
+
+## Websocket only scenario
+Since I only need communication over websockets setting the `transports` on the client to websocket
+
+```javascript
+const socket = io(path, { transports: ['websocket'] });
+```
+
+produces the following error
+
+![Console](https://raw.githubusercontent.com/KenavR/nest-websocket-cors-issue/master/wserror.png)
+
+
+
